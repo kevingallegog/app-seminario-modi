@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2022 a las 05:42:39
+-- Tiempo de generación: 27-10-2022 a las 08:27:06
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_asistencia` (
   `id` int(11) NOT NULL,
-  `fecha` date NOT NULL,
+  `fecha` varchar(50) COLLATE utf8_bin NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_rol` int(11) NOT NULL,
   `id_participante` int(11) NOT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `tb_asistencia` (
 --
 
 INSERT INTO `tb_asistencia` (`id`, `fecha`, `id_usuario`, `id_rol`, `id_participante`, `estado`) VALUES
-(1, '2022-10-26', 1, 1, 1, 1);
+(1, '2022-10-27 23:58:19', 17, 2, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -116,10 +116,10 @@ CREATE TABLE `tb_participante` (
 
 INSERT INTO `tb_participante` (`id`, `codigo`, `nombres`, `apellidos`, `fecha_nacimiento`, `telefono`, `direccion`, `fecha_chequeo`, `peso`, `talla`, `fecha_regalo`, `estado`, `fecha_creado`, `fecha_edicion`, `id_nivel`, `id_religion`, `asis`) VALUES
 (1, 'G10', 'carlos', 'chub', '2022-10-06', '45896612', 'Carcha', '2022-10-03', '100', '100', '2022-10-03', 1, '2022-10-03 19:41:52', '2022-10-04 10:50:45', 1, 1, 0),
-(6, 'J01', 'Leo', 'Soto', '2007-11-03', '45856956', 'Coban', '2022-10-22', '120', 'M', '2022-10-22', 1, '2022-10-22 01:04:50', '2022-10-22 01:04:50', 2, 1, 2),
-(7, 'K01', 'Mariela', 'Ochaeta', '2002-11-26', '54236532', 'Carcha', '2022-10-22', '150', 'S', '2022-10-22', 1, '2022-10-22 01:06:13', '2022-10-22 01:06:13', 3, 2, 1),
+(6, 'J01', 'Leo', 'Soto', '2007-11-03', '45856956', 'Coban', '2022-10-22', '120', 'M', '2022-10-22', 1, '2022-10-22 01:04:50', '2022-10-22 01:04:50', 2, 1, 0),
+(7, 'K01', 'Mariela', 'Ochaeta', '2002-11-26', '54236532', 'Carcha', '2022-10-22', '150', 'S', '2022-10-22', 1, '2022-10-22 01:06:13', '2022-10-22 01:06:13', 3, 2, 0),
 (8, 'G11', 'Fernando', 'Gabriel', '2006-01-04', '45653212', 'Tactic', '2022-10-22', '105', 'S', '2022-10-22', 1, '2022-10-22 10:28:36', '2022-10-22 10:28:36', 1, 1, 1),
-(9, 'J02', 'Marta', 'Ruiz', '2000-02-25', '51236532', 'Carcha', '2022-10-22', '', 'M', '2022-10-22', 1, '2022-10-22 10:30:00', '2022-10-22 10:30:00', 2, 1, 2),
+(9, 'J02', 'Marta', 'Ruiz', '2000-02-25', '51236532', 'Carcha', '2022-10-22', '', 'M', '2022-10-22', 1, '2022-10-22 10:30:00', '2022-10-22 10:30:00', 2, 1, 0),
 (10, 'G12', 'Julio', 'Gutierrez', '0000-00-00', '45653258', 'Coban', '2022-10-22', '', 'S', '2022-10-22', 1, '2022-10-22 10:31:40', '2022-10-22 10:31:40', 1, 2, 1);
 
 -- --------------------------------------------------------
